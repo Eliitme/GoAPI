@@ -1,0 +1,16 @@
+{
+  "verbose": true,
+  "ignore": [
+    "node_modules/**",
+    "bower_components/**",
+    "dist/**",
+    "coverage/**",
+    "test/**",
+    "tests/**",
+    "tmp/**",
+    "vendor/**"
+  ],
+  "execMap": {
+    "go": "go run"
+  }
+}
