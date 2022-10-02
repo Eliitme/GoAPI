@@ -3,8 +3,7 @@ package api
 import (
 	"azure/api/cmd/api/routers"
 	"azure/api/config"
-
-	database "azure/api/internal/database"
+	"azure/api/internal/database"
 )
 
 func RunApi() {
