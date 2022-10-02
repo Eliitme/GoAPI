@@ -4,9 +4,13 @@ import (
 	"azure/api/cmd/api/middlewares"
 
 	"github.com/gin-gonic/gin"
+	swaggerfiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 
 	apiV1 "azure/api/cmd/api/controllers/api/v1"
 	apiV2 "azure/api/cmd/api/controllers/api/v2"
+
+	_ "azure/api/cmd/api/docs"
 )
 
 func RunRouter() *gin.Engine {
@@ -44,6 +48,8 @@ func RunRouter() *gin.Engine {
 	v2 := r.Group("/api/v2")
 
 	v2.GET("hello-world", apiV2.Helloworld)
+
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 
 	return r
 
