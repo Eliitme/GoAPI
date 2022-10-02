@@ -1,0 +1,23 @@
+{
+  "name": "go-api",
+  "version": "1.0.0",
+  "description": "A Go API for multi-purpose",
+  "main": "main.go",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec go run main.go --signal SIGTERM"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eliitme/GoAPI.git"
+  },
+  "author": "Eli <levanlong220700@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eliitme/GoAPI/issues"
+  },
+  "homepage": "https://github.com/Eliitme/GoAPI#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
