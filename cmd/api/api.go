@@ -3,13 +3,15 @@ package api
 import (
 	"azure/api/cmd/api/routers"
 	"azure/api/config"
+
+	database "azure/api/internal/database"
 )
 
 func RunApi() {
 
-	e := config.Getenv()
+	database.Connect()
 
-	println(e.Port)
+	e := config.Getenv()
 
 	r := routers.RunRouter()
 

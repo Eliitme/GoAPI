@@ -8,12 +8,12 @@ import (
 )
 
 type Config struct {
-	Port string
-	DBHost string
-	DBPort string
-	DBUser string
+	Port       string
+	DBHost     string
+	DBPort     string
+	DBUser     string
 	DBPassword string
-	DBName string
+	DBName     string
 }
 
 func Getenv() Config {
@@ -31,23 +31,23 @@ func Getenv() Config {
 	port := os.Getenv("port")
 
 	if dbUser == "" {
-		dbUser = "root"
+		fmt.Println("db_user is not set")
 	}
 	if dbPassword == "" {
-		dbPassword = ""
+		fmt.Println("db_password is not set")
 	}
 	if dbName == "" {
-		dbName = "go_api"
+		fmt.Println("db_name is not set")
 	}
 	if dbHost == "" {
-		dbHost = "localhost"
+		fmt.Println("db_host is not set")
 	}
 	if dbPort == "" {
 		dbPort = "3306"
 	}
 
 	if port == "" {
-		port = "8080"
+		port = "9000"
 	}
 
 	return Config{
